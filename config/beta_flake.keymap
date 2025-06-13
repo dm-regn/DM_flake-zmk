@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -10,53 +9,6 @@
             bindings = <&kp RC(N0)>;
             key-positions = <36 37>;
             layers = <0>;
-        };
-    };
-
-    behaviors {
-        bt0: bt0 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT0";
-            bindings = <&bt BT_SEL 0>, <&bt_clr_0>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt1: bt1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT1";
-            bindings = <&bt BT_SEL 1>, <&bt_clr_1>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt2: bt2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT2";
-            bindings = <&bt BT_SEL 2>, <&bt_clr_2>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt3: bt3 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT3";
-            bindings = <&bt BT_SEL 3>, <&bt_clr_3>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt4: bt4 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT4";
-            bindings = <&bt BT_SEL 4>, <&bt_clr_4>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
