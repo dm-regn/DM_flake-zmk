@@ -6,66 +6,9 @@
     combos {
         compatible = "zmk,combos";
 
-        bt_sel_3 {
-            bindings = <&bt3>;
-            key-positions = <42 30>;
-        };
-
-        bt_sel_4 {
-            bindings = <&bt4>;
-            key-positions = <30 18>;
-        };
-
-        enter_gaming {
-            bindings = <&sl 0>;
-            key-positions = <26 15 28>;
-        };
-
-        leave_gaming {
-            bindings = <&sl 0>;
-            key-positions = <31 20 33>;
-        };
-
-        grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <13 25>;
-        };
-    };
-
-    macros {
-        bt_clr_0: bt_clr_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
-            label = "BT_CLR_0";
-        };
-
-        bt_clr_1: bt_clr_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
-            label = "BT_CLR_1";
-        };
-
-        bt_clr_2: bt_clr_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
-            label = "BT_CLR_2";
-        };
-
-        bt_clr_3: bt_clr_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
-            label = "BT_CLR_3";
-        };
-
-        bt_clr_4: bt_clr_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &bt BT_CLR>;
-            label = "BT_CLR_4";
+        zoom {
+            bindings = <&kp RC(N0)>;
+            key-positions = <36 37>;
         };
     };
 
@@ -121,10 +64,10 @@
 
         base {
             bindings = <
-&none       &kp Q        &kp W       &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y       &kp X        &none
-&sl 4       &mt LGUI R   &mt LALT S  &mt LCTRL D  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I  &mt RGUI O   &sl 4
-&kp RETURN  &key_repeat  &kp C       &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V       &key_repeat  &kp RETURN
-            &none        &none       &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &none       &none
+&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &sl 6    &sl 6  &kp F        &kp U                  &kp Y       &kp X        &sl 5
+&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I  &mt RGUI O   &sl 4
+&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &sl 7    &sl 7  &kp L        &kp K                  &kp V       &key_repeat  &kp RETURN
+            &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &none       &none
             >;
         };
 
