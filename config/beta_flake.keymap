@@ -21,7 +21,7 @@
             label = "DBL_LCLK";
         };
 
-    carets: carets {
+        carets: carets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LT &kp GT &kp LEFT_ARROW>;
@@ -360,7 +360,7 @@
             >;
         };
 
-        layer_3 {
+        num+sym {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
