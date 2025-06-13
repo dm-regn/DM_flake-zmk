@@ -35,9 +35,9 @@
 
         Navigation {
             bindings = <
-&trans  &trans  &trans    &kp UP    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LALT  &mt HOME PG_UP    &kp UP     &mt END PG_DN     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB  &kp LG(R)  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&to 2    &mt RC(F) RC(A)  &mt RG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)     &trans    &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans    &none     &none      &none     &trans  &trans  &trans  &trans  &trans
             >;
         };
