@@ -342,11 +342,11 @@
             >;
         };
 
-        layer_1 {
+        steno {
             bindings = <
-&trans  &trans  &trans  &trans       &trans        &trans    &trans  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &trans        &trans    &trans  &trans        &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans       &trans        &trans    &trans  &trans        &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans       &trans        &trans    &trans  &fl           &ua           &trans  &ox     &trans
+&trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi     &trans  &trans
+&trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &trans        &trans  &trans  &trans
         &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &trans  &trans
             >;
         };
@@ -378,7 +378,7 @@
             >;
         };
 
-        layer_5 {
+        lazy {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -387,7 +387,7 @@
             >;
         };
 
-        layer_6 {
+        auto {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
@@ -396,7 +396,7 @@
             >;
         };
 
-        layer_7 {
+        dot {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
