@@ -362,18 +362,18 @@
 
         num+sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&none      &alt_pm  &kp N7       &kp N3  &kp N4  &kp PERCENT    &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &mt DOUBLE_QUOTES SINGLE_QUOTE  &none
+&kp EQUAL  &kp N0   &key_repeat  &kp N1  &kp N2  &kp N9         &kp PIPE  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                       &mt COLON SEMI
+&trans     &none    &kp N8       &kp N5  &kp N6  &kp DOLLAR     &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET   &to 3
+        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         quick {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &apo_y  &trans  &trans
+&none   &apo_r  &apo_s  &apo_t  &trans  &trans    &trans  &apo_n  &trans  &trans  &trans  &trans
+&trans  &trans  &apo_c  &trans  &trans  &trans    &none  &apo_L  &trans  &apo_v  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
@@ -389,7 +389,7 @@
 
         auto {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&none   &super_ad  &main_ad  &not_app  &year   &none    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
@@ -400,7 +400,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none    &trans  &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
