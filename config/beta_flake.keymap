@@ -9,6 +9,7 @@
         zoom {
             bindings = <&kp RC(N0)>;
             key-positions = <36 37>;
+            layers = <0>;
         };
     };
 
@@ -80,12 +81,12 @@
             >;
         };
 
-        layer_2 {
+        Navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &kp UP    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans    &none     &none      &none     &trans  &trans  &trans  &trans  &trans
             >;
         };
 
