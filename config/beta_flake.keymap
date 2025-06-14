@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -344,64 +346,64 @@
 
         steno {
             bindings = <
-&trans  &trans  &trans  &trans       &trans        &trans    &trans  &fl           &ua           &trans  &ox     &trans
+&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &trans  &ox     &trans
 &trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi     &trans  &trans
-&trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &trans        &trans  &trans  &trans
+&trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &ke           &ve     &eve    &trans
         &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &trans  &trans
             >;
         };
 
         Navigation {
             bindings = <
-&trans   &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &trans    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
-&kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &trans    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &trans    &trans          &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
-         &trans           &trans           &none            &none            &none     &dbl_Lclk       &mkp LCLK       &trans          &trans           &trans
+&trans   &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &trans        &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
+&kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &trans        &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &bt BT_CLR    &out OUT_TOG    &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &to 0
+         &bt BT_PRV       &bt BT_NXT       &none            &none            &none         &dbl_Lclk       &mkp LCLK       &trans          &trans           &trans
             >;
         };
 
         num+sym {
             bindings = <
-&none      &alt_pm  &kp N7       &kp N3  &kp N4  &kp PERCENT    &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &mt DOUBLE_QUOTES SINGLE_QUOTE  &none
-&kp EQUAL  &kp N0   &key_repeat  &kp N1  &kp N2  &kp N9         &kp PIPE  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                       &mt COLON SEMI
-&trans     &none    &kp N8       &kp N5  &kp N6  &kp DOLLAR     &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET   &to 3
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&none      &alt_pm  &kp N3       &kp N4  &kp N7  &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &none                          &none
+&kp EQUAL  &kp N0   &key_repeat  &kp N1  &kp N2  &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
+&to 0      &none    &kp N5       &kp N6  &kp N8  &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
+           &trans   &trans       &trans  &trans  &mt COMMA PERIOD    &none  &none                           &none                               &trans                 &trans
             >;
         };
 
         quick {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &apo_y  &trans  &trans
-&none   &apo_r  &apo_s  &apo_t  &trans  &trans    &trans  &apo_n  &trans  &trans  &trans  &trans
-&trans  &trans  &apo_c  &trans  &trans  &trans    &none  &apo_L  &trans  &apo_v  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans    &trans           &trans                            &trans             &trans  &trans    &apo_y  &trans  &trans
+&none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &trans  &none
+&trans  &trans  &apo_c  &trans    &trans           &trans                            &none              &apo_L  &trans    &apo_v  &trans  &trans
+        &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
             >;
         };
 
         lazy {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&none   &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &none
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &comma  &period    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         auto {
             bindings = <
-&none   &super_ad  &main_ad  &not_app  &year   &none    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &super_ad  &main_ad  &not_app  &year   &none     &none   &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         dot {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none     &none   &trans  &trans  &trans  &trans  &trans
+        &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
