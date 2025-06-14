@@ -22,6 +22,13 @@
             key-positions = <36 37>;
             layers = <0>;
         };
+
+        mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <44 45>;
+            require-prior-idle-ms = <10>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -270,13 +277,6 @@
             label = "OX";
         };
 
-        ax: ax {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp X>;
-            label = "AX";
-        };
-
         ble: ble {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -310,13 +310,6 @@
             #binding-cells = <0>;
             bindings = <&kp E &kp V &kp E>;
             label = "EVE";
-        };
-
-        exe: exe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp E &kp X &kp E>;
-            label = "EXE";
         };
 
         je: je {
@@ -366,10 +359,10 @@
 
         base {
             bindings = <
-&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y       &kp X        &sl 5
-&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I  &mt RGUI O   &sl 4
-&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V       &key_repeat  &kp RETURN
-            &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &none       &none
+&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y         &kp X         &sl 5
+&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I    &mt RGUI O    &sl 4
+&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V         &key_repeat   &kp RETURN
+            &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
@@ -393,7 +386,7 @@
 
         num+sym {
             bindings = <
-&none      &alt_pm  &kp N3       &kp N4  &kp N7  &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &none                          &none
+&none      &alt_pm  &kp N3       &kp N4  &kp N7  &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &kp N0   &key_repeat  &kp N1  &kp N2  &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
 &to 0      &none    &kp N5       &kp N6  &kp N8  &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
            &trans   &trans       &trans  &trans  &mt COMMA PERIOD    &none  &none                           &none                               &trans                 &trans
@@ -404,17 +397,17 @@
             bindings = <
 &trans  &trans  &trans  &trans    &trans           &trans                            &trans             &ef     &trans    &apo_y  &trans  &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &trans  &none
-&trans  &trans  &apo_c  &trans    &trans           &trans                            &none              &apo_L  &ka       &apo_v  &trans  &trans
+&trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
             >;
         };
 
         lazy {
             bindings = <
-&trans  &super_ad  &main_ad    &not_app         &year       &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp C_PREV  &mt C_MUTE C_PP  &kp C_NEXT  &kp C_VOL_UP    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &dot_net   &dot_com    &dot_org         &dot_gov    &kp C_VOL_DN    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans     &trans      &trans           &trans      &trans          &trans  &trans  &trans  &trans  &trans
+&none   &super_ad  &main_ad    &not_app  &year       &trans    &trans  &fe     &trans  &trans  &trans  &none
+&trans  &trans     &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans    &je     &trans  &trans  &trans  &trans  &trans
+&trans  &dot_net   &dot_com    &dot_org  &dot_gov    &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans     &trans      &trans    &trans      &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
