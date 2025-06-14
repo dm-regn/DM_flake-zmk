@@ -339,6 +339,13 @@
             bindings = <&kt KP_NUMLOCK &kt LEFT_ALT &kp N0 &kp N1 &kp N7 &kp N7 &kt LEFT_ALT &kt KP_NUMLOCK>;
             label = "ALT_PM";
         };
+
+        ka: ka {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp K &kp A>;
+            label = "KA";
+        };
     };
 
     behaviors {
@@ -395,9 +402,9 @@
 
         quick {
             bindings = <
-&trans  &trans  &trans  &trans    &trans           &trans                            &trans             &trans  &trans    &apo_y  &trans  &trans
+&trans  &trans  &trans  &trans    &trans           &trans                            &trans             &ef     &trans    &apo_y  &trans  &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &trans  &none
-&trans  &trans  &apo_c  &trans    &trans           &trans                            &none              &apo_L  &trans    &apo_v  &trans  &trans
+&trans  &trans  &apo_c  &trans    &trans           &trans                            &none              &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
             >;
         };
