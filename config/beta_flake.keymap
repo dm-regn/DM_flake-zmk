@@ -4,6 +4,15 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+&mt {
+    require-prior-idle-ms = <10>;
+    tapping-term-ms = <175>;
+};
+
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 PLUS TILDE>; };
+
+&lt { require-prior-idle-ms = <10>; };
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -332,6 +341,19 @@
         };
     };
 
+    behaviors {
+        punct_spc: punct_spc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PUNCT_SPC";
+            bindings = <&period>, <&comma>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            require-prior-idle-ms = <10>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -339,7 +361,7 @@
             bindings = <
 &sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &sl 6    &sl 6  &kp F        &kp U                  &kp Y       &kp X        &sl 5
 &sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I  &mt RGUI O   &sl 4
-&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &sl 7    &sl 7  &kp L        &kp K                  &kp V       &key_repeat  &kp RETURN
+&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V       &key_repeat  &kp RETURN
             &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &none       &none
             >;
         };
@@ -380,18 +402,9 @@
             >;
         };
 
-        lazy {
-            bindings = <
-&none   &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &none
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &comma  &period    &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         auto {
             bindings = <
-&trans  &super_ad  &main_ad  &not_app  &year   &none     &none   &trans  &trans  &trans  &trans  &trans
+&none   &super_ad  &main_ad  &not_app  &year   &trans    &trans  &trans  &trans  &trans  &trans  &none
 &trans  &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
         &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
@@ -400,10 +413,10 @@
 
         dot {
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &dot_net  &dot_com  &dot_org  &dot_gov  &none     &none   &trans  &trans  &trans  &trans  &trans
-        &trans    &trans    &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans      &trans    &trans      &none     &none   &trans        &trans      &trans        &trans  &trans
+&trans  &trans    &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans
+&trans  &dot_net  &dot_com    &dot_org  &dot_gov    &trans    &trans  &trans        &trans      &trans        &trans  &trans
+        &trans    &trans      &trans    &trans      &trans    &trans  &trans        &trans      &trans        &trans
             >;
         };
     };
