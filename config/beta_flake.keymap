@@ -359,7 +359,7 @@
 
         base {
             bindings = <
-&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &sl 6    &sl 6  &kp F        &kp U                  &kp Y       &kp X        &sl 5
+&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y       &kp X        &sl 5
 &sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I  &mt RGUI O   &sl 4
 &kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V       &key_repeat  &kp RETURN
             &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &none       &none
@@ -402,21 +402,12 @@
             >;
         };
 
-        auto {
+        lazy {
             bindings = <
-&none   &super_ad  &main_ad  &not_app  &year   &trans    &trans  &trans  &trans  &trans  &trans  &none
-&trans  &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans     &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        dot {
-            bindings = <
-&trans  &trans    &trans      &trans    &trans      &none     &none   &trans        &trans      &trans        &trans  &trans
-&trans  &trans    &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans    &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_VOL_UP  &trans  &trans
-&trans  &dot_net  &dot_com    &dot_org  &dot_gov    &trans    &trans  &trans        &trans      &trans        &trans  &trans
-        &trans    &trans      &trans    &trans      &trans    &trans  &trans        &trans      &trans        &trans
+&trans  &super_ad  &main_ad    &not_app         &year       &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp C_PREV  &mt C_MUTE C_PP  &kp C_NEXT  &kp C_VOL_UP    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &dot_net   &dot_com    &dot_org         &dot_gov    &kp C_VOL_DN    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans     &trans      &trans           &trans      &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
