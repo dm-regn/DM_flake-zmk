@@ -5,13 +5,13 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mt {
-    require-prior-idle-ms = <10>;
-    tapping-term-ms = <175>;
+    require-prior-idle-ms = <25>;
+    flavor = "tap-preferred";
 };
 
 &caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 PLUS TILDE>; };
 
-&lt { require-prior-idle-ms = <10>; };
+&lt { require-prior-idle-ms = <25>; };
 
 / {
     combos {
@@ -348,8 +348,8 @@
             bindings = <&period>, <&comma>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            require-prior-idle-ms = <10>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <25>;
             flavor = "tap-preferred";
         };
     };
@@ -359,8 +359,8 @@
 
         base {
             bindings = <
-&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y         &kp X         &sl 5
-&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I    &mt RGUI O    &sl 4
+&sl 5       &kp B          &kp W          &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y         &kp X         &sl 5
+&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp Q    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I    &mt RGUI O    &sl 4
 &kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V         &key_repeat   &kp RETURN
             &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &kp C_VOL_DN  &kp C_VOL_UP
             >;
@@ -368,8 +368,8 @@
 
         steno {
             bindings = <
-&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &trans  &ox     &trans
-&trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi     &trans  &trans
+&trans  &ble    &trans  &trans       &ph           &trans    &trans  &fl           &ua           &trans  &ox     &trans
+&trans  &trans  &sw     &trans       &trans        &trans    &trans  &trans        &au           &vi     &trans  &trans
 &trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &ke           &ve     &eve    &trans
         &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &trans  &trans
             >;
