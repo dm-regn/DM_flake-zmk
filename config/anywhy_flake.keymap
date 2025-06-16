@@ -86,6 +86,7 @@
             #binding-cells = <0>;
             bindings = <&kp D &kp E &kp L &kp L &kp O &kp N &kp DOT &kp M &kp O &kp Y>;
             label = "MAIN_AD";
+            wait-ms = <0>;
         };
 
         super_ad: super_ad {
@@ -93,6 +94,7 @@
             #binding-cells = <0>;
             bindings = <&kp S &kp DOT &kp D &kp E &kp L &kp L &kp O &kp N &kp DOT &kp M &kp O &kp Y>;
             label = "SUPER_AD";
+            wait-ms = <0>;
         };
 
         apo_r: apo_r {
@@ -377,19 +379,19 @@
 
         Navigation {
             bindings = <
-&trans   &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &trans        &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
+&to 0    &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &trans        &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
 &kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &trans        &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &bt BT_CLR    &out OUT_TOG    &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &to 0
+&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &bt BT_CLR    &out OUT_TOG    &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
          &bt BT_PRV       &bt BT_NXT       &none            &none            &none         &dbl_Lclk       &mkp LCLK       &trans          &trans           &trans
             >;
         };
 
         num+sym {
             bindings = <
-&none      &alt_pm  &kp N3       &kp N4  &kp N7  &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
-&kp EQUAL  &kp N0   &key_repeat  &kp N1  &kp N2  &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&to 0      &none    &kp N5       &kp N6  &kp N8  &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
-           &trans   &trans       &trans  &trans  &mt COMMA PERIOD    &none  &none                           &none                               &trans                 &trans
+&trans     &alt_pm  &kp N3       &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &to 0
+&kp EQUAL  &kp N0   &key_repeat  &kp N1   &kp N2    &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
+&trans     &none    &kp N5       &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
+           &trans   &trans       &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none  &none                           &none                               &trans                 &trans
             >;
         };
 
