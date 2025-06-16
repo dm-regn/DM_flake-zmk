@@ -404,10 +404,10 @@
 
         lazy {
             bindings = <
-&none   &super_ad  &main_ad    &not_app  &year       &trans    &trans  &fe     &trans  &trans  &trans  &none
-&trans  &trans     &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans    &je     &trans  &trans  &trans  &trans  &trans
-&trans  &dot_net   &dot_com    &dot_org  &dot_gov    &trans    &trans  &trans  &trans  &trans  &trans  &trans
-        &trans     &trans      &trans    &trans      &trans    &trans  &trans  &trans  &trans  &trans
+&none   &super_ad  &main_ad    &not_app  &year       &trans    &trans      &fe           &trans        &trans        &trans        &none
+&trans  &trans     &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans    &je         &trans        &trans        &trans        &trans        &trans
+&trans  &dot_net   &dot_com    &dot_org  &dot_gov    &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+        &trans     &trans      &trans    &trans      &trans    &trans      &trans        &trans        &trans        &trans
             >;
         };
     };
