@@ -458,7 +458,16 @@
 &punct_spc 0 0  &super_ad  &main_ad  &not_app   &year     &trans    &trans      &fe           &trans        &vy           &trans        &trans
 &trans          &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &trans
 &trans          &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                &trans     &trans    &none      &trans    &trans    &trans      &trans        &none         &trans        &trans
+                &to 6      &trans    &none      &trans    &trans    &trans      &trans        &none         &trans        &trans
+            >;
+        };
+
+        gaming {
+            bindings = <
+&kp Y    &kp U           &kp Q    &kp W      &kp E      &kp Y           &trans  &trans  &trans  &trans  &trans  &trans
+&kp R    &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
+&kp RET  &kp M           &kp Z    &kp C      &kp V      &kp B           &trans  &trans  &trans  &trans  &trans  &trans
+         &to 0           &kp TAB  &kp LCTRL  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
