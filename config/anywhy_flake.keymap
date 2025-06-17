@@ -376,6 +376,13 @@
             bindings = <&kp SQT &kp M>;
             label = "APO_M";
         };
+
+        ou: ou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp U>;
+            label = "OU";
+        };
     };
 
     behaviors {
@@ -405,7 +412,7 @@
 
         steno {
             bindings = <
-&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &trans      &ox         &trans
+&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &ou         &ox         &trans
 &trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi         &ov         &trans
 &trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &ke           &ve         &eve        &trans
         &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &kp C_PREV  &kp C_NEXT
@@ -441,10 +448,10 @@
 
         lazy {
             bindings = <
-&trans  &super_ad  &main_ad  &not_app   &year     &punct_spc 0 0    &trans      &fe           &trans        &trans        &trans        &trans
-&trans  &carets    &parents  &brackets  &curls    &trans            &je         &trans        &trans        &trans        &trans        &trans
-&trans  &dot_net   &dot_com  &dot_org   &dot_gov  &trans            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &trans     &trans    &none      &trans    &trans            &trans      &trans        &none         &trans        &trans
+&punct_spc 0 0  &super_ad  &main_ad  &not_app   &year     &trans    &trans      &fe           &trans        &trans        &trans        &trans
+&trans          &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &trans
+&trans          &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+                &trans     &trans    &none      &trans    &trans    &trans      &trans        &none         &trans        &trans
             >;
         };
     };
