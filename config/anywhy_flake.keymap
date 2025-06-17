@@ -389,10 +389,10 @@
 
         base {
             bindings = <
-&sl 5       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none    &none  &kp F        &kp U                  &kp Y         &kp X         &sl 5
-&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B    &kp J  &mt RSHFT N  &mt RCTRL A            &mt RALT I    &mt RGUI O    &sl 4
-&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &none    &none  &kp L        &kp K                  &kp V         &key_repeat   &kp RETURN
-            &kp RC(MINUS)  &kp LC(EQUAL)  &mt F4 ESC   &lt 2 SPACE        &sl 1    &sl 1  &lt 3 E      &mt RG(L) RA(RC(DEL))  &kp C_VOL_DN  &kp C_VOL_UP
+&none       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none         &none                  &kp F        &kp U        &kp Y         &kp X         &none
+&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B         &kp J                  &mt RSHFT N  &mt RCTRL A  &mt RALT I    &mt RGUI O    &sl 4
+&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L        &kp K        &kp V         &key_repeat   &kp RETURN
+            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5        &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E      &sl 5        &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
@@ -434,10 +434,10 @@
 
         lazy {
             bindings = <
-&none   &super_ad  &main_ad  &not_app   &year     &punct_spc 0 0    &trans      &fe           &trans        &trans        &trans        &none
+&trans  &super_ad  &main_ad  &not_app   &year     &punct_spc 0 0    &trans      &fe           &trans        &trans        &trans        &trans
 &trans  &carets    &parents  &brackets  &curls    &trans            &je         &trans        &trans        &trans        &trans        &trans
 &trans  &dot_net   &dot_com  &dot_org   &dot_gov  &trans            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &trans     &trans    &trans     &trans    &trans            &trans      &trans        &trans        &trans        &trans
+        &trans     &trans    &none      &trans    &trans            &trans      &trans        &none         &trans        &trans
             >;
         };
     };
