@@ -29,6 +29,13 @@
             require-prior-idle-ms = <10>;
             layers = <0>;
         };
+
+        caps {
+            bindings = <&caps_word>;
+            key-positions = <40 41>;
+            require-prior-idle-ms = <25>;
+            layers = <0>;
+        };
     };
 
     macros {
