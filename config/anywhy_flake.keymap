@@ -36,6 +36,13 @@
             require-prior-idle-ms = <25>;
             layers = <0>;
         };
+
+        pp {
+            bindings = <&kp C_PP>;
+            key-positions = <44 45>;
+            require-prior-idle-ms = <25>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -348,6 +355,20 @@
             bindings = <&kp K &kp A>;
             label = "KA";
         };
+
+        ov: ov {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp V>;
+            label = "OV";
+        };
+
+        vo: vo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp V &kp O>;
+            label = "VO";
+        };
     };
 
     behaviors {
@@ -377,10 +398,10 @@
 
         steno {
             bindings = <
-&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &trans  &ox     &trans
-&trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi     &trans  &trans
-&trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &ke           &ve     &eve    &trans
-        &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &trans  &trans
+&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &trans      &ox         &trans
+&trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi         &ov         &trans
+&trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &ke           &ve         &eve        &trans
+        &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &kp C_PREV  &kp C_NEXT
             >;
         };
 
@@ -405,7 +426,7 @@
         quick {
             bindings = <
 &trans  &trans  &trans  &trans    &trans           &trans                            &trans             &ef     &trans    &apo_y  &kp Z   &trans
-&none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &trans  &none
+&none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &vo     &none
 &trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
             >;
@@ -413,10 +434,10 @@
 
         lazy {
             bindings = <
-&none   &super_ad  &main_ad    &not_app  &year       &punct_spc 0 0    &trans      &fe           &trans        &trans        &trans        &none
-&trans  &trans     &kp C_PREV  &kp C_PP  &kp C_NEXT  &trans            &je         &trans        &trans        &trans        &trans        &trans
-&trans  &dot_net   &dot_com    &dot_org  &dot_gov    &trans            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-        &trans     &trans      &trans    &trans      &trans            &trans      &trans        &trans        &trans        &trans
+&none   &super_ad  &main_ad  &not_app   &year     &punct_spc 0 0    &trans      &fe           &trans        &trans        &trans        &none
+&trans  &carets    &parents  &brackets  &curls    &trans            &je         &trans        &trans        &trans        &trans        &trans
+&trans  &dot_net   &dot_com  &dot_org   &dot_gov  &trans            &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+        &trans     &trans    &trans     &trans    &trans            &trans      &trans        &trans        &trans        &trans
             >;
         };
     };
