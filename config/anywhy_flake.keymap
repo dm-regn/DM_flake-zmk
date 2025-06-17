@@ -369,6 +369,13 @@
             bindings = <&kp V &kp O>;
             label = "VO";
         };
+
+        apo_m: apo_m {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp M>;
+            label = "APO_M";
+        };
     };
 
     behaviors {
@@ -425,7 +432,7 @@
 
         quick {
             bindings = <
-&trans  &trans  &trans  &trans    &trans           &trans                            &trans             &ef     &trans    &apo_y  &kp Z   &trans
+&trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &trans    &apo_y  &kp Z   &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &vo     &none
 &trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
