@@ -449,19 +449,19 @@
 
         Navigation {
             bindings = <
-&to 0    &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &trans
-&kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &trans            &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&to 0    &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
 &to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &bt BT_CLR        &out OUT_TOG    &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
-         &bt BT_PRV       &bt BT_NXT       &none            &none            &none             &dbl_Lclk       &mkp LCLK       &trans          &trans           &trans
+         &bt BT_PRV       &bt BT_NXT       &none            &none            &none             &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
 
         num+sym {
             bindings = <
-&to 0      &alt_pm      &kp N3  &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &trans
+&to 0      &alt_pm      &kp N3  &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &key_repeat  &kp N0  &kp N1   &kp N2    &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
-           &trans       &trans  &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none  &none                           &none                               &trans                 &trans
+&none      &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
+           &none        &none   &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none  &none                           &none                               &none                  &none
             >;
         };
 
@@ -476,10 +476,10 @@
 
         lazy {
             bindings = <
-&punct_spc 0 0  &super_ad  &main_ad  &not_app   &year     &trans    &trans      &fe           &trans        &vy           &ox           &trans
-&trans          &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &trans
+&punct_spc 0 0  &super_ad  &main_ad  &not_app   &year     &trans    &trans      &fe           &trans        &vy           &ox           &none
+&none           &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &none
 &trans          &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                &trans     &trans    &none      &trans    &trans    &trans      &trans        &none         &trans        &trans
+                &trans     &trans    &none      &trans    &none     &none       &trans        &none         &trans        &trans
             >;
         };
 
