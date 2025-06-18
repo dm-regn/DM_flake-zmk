@@ -390,6 +390,13 @@
             bindings = <&kp V &kp Y>;
             label = "VY";
         };
+
+        ye: ye {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp E>;
+            label = "YE";
+        };
     };
 
     behaviors {
@@ -419,7 +426,7 @@
 
         steno {
             bindings = <
-&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &ou         &ox         &trans
+&trans  &trans  &trans  &trans       &ph           &trans    &trans  &fl           &ua           &ye         &ox         &trans
 &trans  &trans  &sw     &trans       &trans        &ble      &trans  &trans        &au           &vi         &ov         &trans
 &trans  &trans  &cs     &gm          &pd           &trans    &trans  &lf           &ke           &ve         &eve        &trans
         &trans  &trans  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(BSPC)  &kp C_PREV  &kp C_NEXT
@@ -446,7 +453,7 @@
 
         quick {
             bindings = <
-&trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &trans    &apo_y  &kp Z   &trans
+&trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &ou       &apo_y  &kp Z   &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &vo     &none
 &trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
