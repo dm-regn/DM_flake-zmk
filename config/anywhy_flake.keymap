@@ -46,9 +46,23 @@
 
         gaming {
             bindings = <&to 6>;
-            key-positions = <36 37>;
+            key-positions = <44 45>;
             layers = <5>;
             require-prior-idle-ms = <25>;
+        };
+
+        navi {
+            bindings = <&to 2>;
+            key-positions = <44 45>;
+            require-prior-idle-ms = <25>;
+            layers = <2>;
+        };
+
+        nums {
+            bindings = <&to 3>;
+            key-positions = <44 45>;
+            require-prior-idle-ms = <25>;
+            layers = <3>;
         };
     };
 
@@ -425,6 +439,13 @@
             bindings = <&kp R &kp E>;
             label = "RE";
         };
+
+        gh: gh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp H>;
+            label = "GH";
+        };
     };
 
     behaviors {
@@ -456,7 +477,7 @@
 
         base {
             bindings = <
-&none       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &none         &none                  &kp F        &kp U        &kp Y         &kp X         &none
+&none       &kp Q          &kp W          &kp M        &mt PRINTSCREEN P  &kp Z         &none                  &kp F        &kp U        &kp Y         &kp X         &none
 &sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B         &kp J                  &mt RSHFT N  &mt RCTRL A  &mt RALT I    &mt RGUI O    &sl 4
 &kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L        &kp K        &kp V         &key_repeat   &kp RETURN
             &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5        &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E      &sl 5        &kp C_VOL_DN  &kp C_VOL_UP
@@ -466,7 +487,7 @@
         steno {
             bindings = <
 &trans  &trans   &trans  &trans       &ph           &trans      &trans  &fl           &ou          &ye         &xe         &trans
-&trans  &re      &sw     &trans       &trans        &ble        &trans  &fe           &au          &vi         &ov         &trans
+&trans  &re      &sw     &trans       &gh           &ble        &trans  &fe           &au          &vi         &ov         &trans
 &trans  &kp DEL  &cs     &gm          &pd           &kp BSPC    &trans  &lf           &ke          &ve         &eve        &trans
         &trans   &trans  &kp LC(DEL)  &kp LC(BSPC)  &none       &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
@@ -476,7 +497,7 @@
             bindings = <
 &to 0    &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none             &none           &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
+&trans   &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none             &none           &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
          &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG      &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
@@ -485,14 +506,14 @@
             bindings = <
 &to 0      &none        &kp N3  &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &key_repeat  &kp N0  &kp N1   &kp N2    &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
+&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &trans
            &none        &none   &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none  &none                           &none                               &none                  &none
             >;
         };
 
         quick {
             bindings = <
-&trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &ua       &apo_y  &kp Z   &trans
+&trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &ua       &apo_y  &trans  &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &vo     &none
 &trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp AMPS  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp PIPE  &trans  &trans
