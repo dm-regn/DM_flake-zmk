@@ -411,6 +411,20 @@
             bindings = <&kp X &kp E>;
             label = "XE";
         };
+
+        dbl_qte: dbl_qte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "DBL_QTE";
+        };
+
+        sgl_qte: sgl_qte {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "SGL_QTE";
+        };
     };
 
     behaviors {
@@ -418,6 +432,17 @@
             compatible = "zmk,behavior-hold-tap";
             label = "PUNCT_SPC";
             bindings = <&period>, <&comma>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <25>;
+            flavor = "tap-preferred";
+        };
+
+        quotes: quotes {
+            compatible = "zmk,behavior-hold-tap";
+            label = "QUOTES";
+            bindings = <&dbl_qte>, <&sgl_qte>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -477,7 +502,7 @@
         lazy {
             bindings = <
 &punct_spc 0 0  &super_ad  &main_ad  &not_app   &year     &trans    &trans      &fe           &trans        &vy           &ox           &none
-&none           &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &none
+&quotes 0 0     &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &none
 &trans          &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
                 &trans     &trans    &none      &trans    &none     &none       &trans        &none         &trans        &trans
             >;
