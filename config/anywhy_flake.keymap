@@ -391,7 +391,7 @@
         apo_m: apo_m {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT &kp M>;
+            bindings = <&kp SQT &kp M &kp SPACE>;
             label = "APO_M";
         };
 
@@ -449,6 +449,13 @@
             #binding-cells = <0>;
             bindings = <&kp G &kp H>;
             label = "GH";
+        };
+
+        apo_d: apo_d {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp D &kp SPACE>;
+            label = "APO_D";
         };
     };
 
