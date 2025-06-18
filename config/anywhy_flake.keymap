@@ -349,13 +349,6 @@
             label = "PH";
         };
 
-        alt_pm: alt_pm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kt KP_NUMLOCK &kt LEFT_ALT &kp N0 &kp N1 &kp N7 &kp N7 &kt LEFT_ALT &kt KP_NUMLOCK>;
-            label = "ALT_PM";
-        };
-
         ka: ka {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -425,6 +418,13 @@
             bindings = <&kp SQT &kp SQT &kp LEFT>;
             label = "SGL_QTE";
         };
+
+        re: re {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp E>;
+            label = "RE";
+        };
     };
 
     behaviors {
@@ -466,7 +466,7 @@
         steno {
             bindings = <
 &trans  &trans   &trans  &trans       &ph           &trans      &trans  &fl           &ou          &ye         &xe         &trans
-&trans  &trans   &sw     &trans       &trans        &ble        &trans  &fe           &au          &vi         &ov         &trans
+&trans  &re      &sw     &trans       &trans        &ble        &trans  &fe           &au          &vi         &ov         &trans
 &trans  &kp DEL  &cs     &gm          &pd           &kp BSPC    &trans  &lf           &ke          &ve         &eve        &trans
         &trans   &trans  &kp LC(DEL)  &kp LC(BSPC)  &none       &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
@@ -476,16 +476,16 @@
             bindings = <
 &to 0    &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &bt BT_CLR        &out OUT_TOG    &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
-         &bt BT_PRV       &bt BT_NXT       &none            &none            &none             &dbl_Lclk       &mkp LCLK       &none           &none            &none
+&to 2    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none             &none           &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
+         &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG      &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
 
         num+sym {
             bindings = <
-&to 0      &alt_pm      &kp N3  &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
+&to 0      &none        &kp N3  &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &key_repeat  &kp N0  &kp N1   &kp N2    &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&none      &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
+&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &to 3
            &none        &none   &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none  &none                           &none                               &none                  &none
             >;
         };
@@ -510,10 +510,10 @@
 
         gaming {
             bindings = <
-&to 0    &kp U           &kp Q    &kp W      &kp E      &kp Y           &trans  &trans  &trans  &trans  &trans  &trans
-&kp R    &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
-&kp RET  &kp M           &kp Z    &kp C      &kp V      &kp B           &trans  &trans  &trans  &trans  &trans  &trans
-         &kp Y           &kp TAB  &kp LCTRL  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+&to 0   &kp U           &kp Q    &kp W      &kp E      &kp Y           &trans  &trans  &trans  &trans  &trans  &trans
+&kp R   &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp M           &kp Z    &kp C      &kp V      &kp B           &trans  &trans  &trans  &trans  &trans  &trans
+        &kp Y           &kp TAB  &kp LCTRL  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
