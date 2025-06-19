@@ -457,6 +457,13 @@
             bindings = <&kp SQT &kp D &kp SPACE>;
             label = "APO_D";
         };
+
+        ion: ion {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp I &kp O &kp N &kp SPACE>;
+            label = "ION";
+        };
     };
 
     behaviors {
@@ -525,7 +532,7 @@
         quick {
             bindings = <
 &trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &trans    &apo_y  &trans  &trans
-&none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &trans  &vo     &none
+&none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &ion    &vo     &none
 &trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
         &trans  &trans  &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &trans  &trans
             >;
