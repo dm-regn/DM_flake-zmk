@@ -504,10 +504,10 @@
 
         steno {
             bindings = <
-&trans  &trans   &trans  &trans       &ph           &trans      &trans  &fl           &ua          &ye         &xe         &trans
-&trans  &re      &sw     &trans       &gh           &ble        &trans  &fe           &au          &vi         &ov         &ou
-&trans  &kp DEL  &cs     &gm          &pd           &kp BSPC    &trans  &lf           &ke          &ve         &eve        &trans
-        &trans   &trans  &kp LC(DEL)  &kp LC(BSPC)  &none       &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
+&trans          &trans   &trans  &trans       &ph           &trans      &trans  &fl           &ua          &ye         &xe         &trans
+&punct_spc 0 0  &re      &sw     &trans       &gh           &ble        &trans  &fe           &au          &vi         &ov         &ou
+&trans          &kp DEL  &cs     &gm          &pd           &kp BSPC    &trans  &lf           &ke          &ve         &eve        &trans
+                &trans   &trans  &kp LC(DEL)  &kp LC(BSPC)  &none       &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
         };
 
@@ -522,10 +522,10 @@
 
         num+sym {
             bindings = <
-&to 0      &none        &kp N3  &kp N4   &kp N7    &kp PERCENT         &none  &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
-&kp EQUAL  &key_repeat  &kp N0  &kp N1   &kp N2    &kp N9              &none  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none  &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &trans
-           &none        &none   &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none  &none                           &none                               &none                  &none
+&to 0      &none        &kp N3  &kp N4   &kp N7    &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
+&kp EQUAL  &key_repeat  &kp N0  &kp N1   &kp N2    &kp N9              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
+&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &trans
+           &none        &none   &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none     &none                           &none                               &none                  &none
             >;
         };
 
@@ -540,10 +540,10 @@
 
         lazy {
             bindings = <
-&punct_spc 0 0  &super_ad  &main_ad  &not_app   &year     &trans    &trans      &trans        &trans        &vy           &ox           &none
-&quotes 0 0     &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &none
-&trans          &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-                &trans     &trans    &none      &trans    &none     &none       &trans        &none         &trans        &trans
+&none        &super_ad  &main_ad  &not_app   &year     &trans    &trans      &trans        &trans        &vy           &ox           &none
+&quotes 0 0  &carets    &parents  &brackets  &curls    &trans    &je         &trans        &trans        &trans        &trans        &none
+&trans       &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+             &trans     &trans    &none      &trans    &none     &none       &trans        &none         &trans        &trans
             >;
         };
 
