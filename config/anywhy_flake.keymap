@@ -513,10 +513,10 @@
 
         Navigation {
             bindings = <
-&to 0    &kp LALT         &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&kp TAB  &kp LG(R)        &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&trans   &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none             &none           &kp RSHFT       &kp RCTRL       &kp RALT         &kp LGUI         &trans
-         &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG      &dbl_Lclk       &mkp LCLK       &none           &none            &none
+&to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&trans    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none             &none           &kp RSHFT       &kp RCTRL       &kp RALT         &none            &trans
+          &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG      &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
 
