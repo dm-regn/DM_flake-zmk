@@ -1,14 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#import "anywhy_flake.dtsi"
+#include "anywhy_flake.dtsi"
 
 / {
-    physical_layout_0 {
-        transform = <&medium_transform>;
-    };
-
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,physical-layout = &physical_layout_0;
     };
 
     mock_kscan: mock_kscan_0 {
