@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#import "my_keyboard-layouts.dtsi"
+#import "anywhy_flake.dtsi"
 
 &physical_layout0 {
     transform = <&medium_transform>;
