@@ -497,10 +497,10 @@
 
         steno {
             bindings = <
-&trans          &xe      &trans  &trans       &ph           &trans      &trans  &fl           &ua          &ye         &trans      &trans
-&punct_spc 0 0  &re      &sw     &trans       &gh           &ble        &trans  &fe           &au          &vi         &ov         &ou
-&trans          &kp DEL  &cs     &gm          &pd           &kp BSPC    &trans  &lf           &ke          &ve         &eve        &trans
-                &trans   &trans  &kp LC(DEL)  &kp LC(BSPC)  &none       &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
+&trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ye         &trans      &trans
+&punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &ou
+&trans          &trans   &cs       &gm          &pd           &trans    &trans  &lf           &ke          &ve         &eve        &trans
+                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
         };
 
