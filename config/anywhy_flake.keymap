@@ -402,13 +402,6 @@
             label = "VY";
         };
 
-        ye: ye {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Y &kp E>;
-            label = "YE";
-        };
-
         xe: xe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -497,8 +490,8 @@
 
         steno {
             bindings = <
-&trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ye         &trans      &trans
-&punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &ou
+&trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ou         &trans      &trans
+&punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &none
 &sk LSHFT       &none    &cs       &gm          &pd           &trans    &trans  &lf           &ke          &ve         &eve        &sk RSHFT
                 &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
