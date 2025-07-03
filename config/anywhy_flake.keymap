@@ -68,6 +68,48 @@
             require-prior-idle-ms = <25>;
             layers = <3>;
         };
+
+        L_SHFT {
+            bindings = <&sk LSHFT>;
+            key-positions = <15 16>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        R_SHFT {
+            bindings = <&sk LSHFT>;
+            key-positions = <19 20>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        L_CTRL {
+            bindings = <&sk LCTRL>;
+            key-positions = <14 15>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        R_CTRL {
+            bindings = <&sk LCTRL>;
+            key-positions = <20 21>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        L_ALT {
+            bindings = <&sk LALT>;
+            key-positions = <13 14>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        R_ALT {
+            bindings = <&sk LALT>;
+            key-positions = <21 22>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
     };
 
     macros {
@@ -481,10 +523,10 @@
 
         base {
             bindings = <
-&none       &kp X          &kp W          &kp M        &mt PRINTSCREEN P  &kp Z         &none                  &kp F        &kp U        &kp Y         &kp Q         &none
-&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B         &kp J                  &mt RSHFT N  &mt RCTRL A  &mt RALT I    &mt RGUI O    &sl 4
-&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L        &kp K        &kp V         &key_repeat   &kp RETURN
-            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5        &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E      &sl 5        &kp C_VOL_DN  &kp C_VOL_UP
+&none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
+&sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
+&kp RETURN  &key_repeat    &kp C          &kp G  &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K  &kp V         &key_repeat   &kp RETURN
+            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5  &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E  &sl 5  &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
