@@ -522,6 +522,7 @@
         compatible = "zmk,keymap";
 
         base {
+            display-name = "Base";
             bindings = <
 &none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
 &sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
@@ -531,6 +532,7 @@
         };
 
         steno {
+            display-name = "Stno";
             bindings = <
 &trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ou         &trans      &trans
 &punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &none
@@ -540,6 +542,7 @@
         };
 
         Navigation {
+            display-name = "Navi";
             bindings = <
 &to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
@@ -549,6 +552,7 @@
         };
 
         num+sym {
+            display-name = "N+S";
             bindings = <
 &to 0      &none         &kp N3        &kp N4   &kp N7    &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &key_repeat   &kp N0        &kp N1   &kp N2    &kp N9              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
@@ -558,6 +562,7 @@
         };
 
         quick {
+            display-name = "qwck";
             bindings = <
 &trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &trans    &apo_y  &trans  &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &ion    &vo     &none
@@ -567,6 +572,7 @@
         };
 
         lazy {
+            display-name = "Lazy";
             bindings = <
 &none        &super_ad  &main_ad  &not_app   &year     &bootloader    &trans  &trans        &trans        &vy           &trans        &none
 &quotes 0 0  &carets    &parents  &brackets  &curls    &trans         &je     &trans        &trans        &trans        &trans        &none
@@ -576,6 +582,7 @@
         };
 
         gaming {
+            display-name = "Game";
             bindings = <
 &to 0   &kp U           &kp Q    &kp W      &kp E      &kp Y           &trans  &trans  &trans  &trans  &trans  &trans
 &kp R   &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
