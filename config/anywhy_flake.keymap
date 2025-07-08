@@ -103,6 +103,26 @@
             require-prior-idle-ms = <100>;
             layers = <0>;
         };
+
+        game {
+            bindings = <&to 6>;
+            key-positions = <0 12 24>;
+            layers = <0>;
+        };
+
+        c_pars {
+            bindings = <&PARS>;
+            key-positions = <31 32>;
+            layers = <3>;
+            require-prior-idle-ms = <100>;
+        };
+
+        c_bars {
+            bindings = <&BARS>;
+            key-positions = <33 34>;
+            layers = <3>;
+            require-prior-idle-ms = <100>;
+        };
     };
 
     macros {
@@ -510,17 +530,6 @@
             flavor = "tap-preferred";
         };
 
-        zmk_fx: zmk_fx {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ZMK_FX";
-            bindings = <&bootloader>, <&studio_unlock>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-        };
-
         LYR_1_2: LYR_1_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "LYR_1_2";
@@ -533,6 +542,20 @@
             label = "LYR_1_3";
             #binding-cells = <0>;
             bindings = <&sl 1>, <&to 3>;
+        };
+
+        PARS: PARS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PARS";
+            #binding-cells = <0>;
+            bindings = <&parents>, <&carets>;
+        };
+
+        BARS: BARS {
+            compatible = "zmk,behavior-tap-dance";
+            label = "BARS";
+            #binding-cells = <0>;
+            bindings = <&brackets>, <&curls>;
         };
     };
 
@@ -592,10 +615,10 @@
         lazy {
             display-name = "Lazy";
             bindings = <
-&none        &super_ad  &main_ad  &not_app   &year     &none          &none  &none  &none  &none  &none  &none
-&quotes 0 0  &parents   &carets   &brackets  &curls    &none          &none  &none  &none  &none  &none  &none
-&none        &dot_net   &dot_com  &dot_org   &dot_gov  &zmk_fx 0 0    &none  &none  &none  &none  &none  &none
-             &none      &none     &none      &none     &none          &none  &none  &none  &none  &none
+&none  &super_ad    &main_ad  &not_app  &year     &none    &none  &none  &none  &none  &none  &none
+&none  &quotes 0 0  &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
+&none  &dot_net     &dot_com  &dot_org  &dot_gov  &none    &none  &none  &none  &none  &none  &none
+       &none        &none     &none     &none     &none    &none  &none  &none  &none  &none
             >;
         };
 
