@@ -524,7 +524,6 @@
         base {
             display-name = "Base";
             bindings = <
-
 &none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
 &sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
 &kp RETURN  &key_repeat    &kp C          &kp G  &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K  &kp V         &key_repeat   &kp RETURN
@@ -535,11 +534,10 @@
         steno {
             display-name = "Stno";
             bindings = <
-
-&trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ou         &trans      &trans
-&punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &none
-&sk LSHFT       &none    &cs       &gm          &pd           &trans    &trans  &lf           &ke          &ve         &eve        &sk RSHFT
-                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
+&none           &xe      &none     &none        &ph           &none    &pd    &fl           &ua          &ou         &none       &none
+&punct_spc 0 0  &re      &sw       &none        &gh           &ble     &je    &fe           &au          &vi         &ov         &none
+&sk LSHFT       &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve         &eve        &sk RSHFT
+                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
         };
 
@@ -566,20 +564,20 @@
         quick {
             display-name = "qwck";
             bindings = <
-&trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &trans    &apo_y  &trans  &trans
-&none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &ion    &vo     &none
-&trans  &trans  &apo_c  &trans    &trans           &trans                            &trans             &apo_L  &ka       &apo_v  &trans  &trans
-        &trans  &trans  &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &trans  &trans
+&none  &none   &none   &apo_m    &none            &none                             &none              &ef     &none     &apo_y  &vy    &none
+&none  &apo_r  &apo_s  &apo_t    &none            &none                             &none              &apo_n  &none     &ion    &vo    &none
+&none  &none   &apo_c  &none     &none            &none                             &none              &apo_L  &ka       &apo_v  &none  &none
+       &none   &none   &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
             >;
         };
 
         lazy {
             display-name = "Lazy";
             bindings = <
-&none        &super_ad  &main_ad  &not_app   &year     &bootloader    &trans  &trans        &trans        &vy           &trans        &none
-&quotes 0 0  &carets    &parents  &brackets  &curls    &trans         &je     &trans        &trans        &trans        &trans        &none
-&trans       &dot_net   &dot_com  &dot_org   &dot_gov  &trans         &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-             &trans     &trans    &none      &trans    &none          &none   &trans        &none         &trans        &trans
+&none        &super_ad  &main_ad  &not_app   &year     &bootloader    &none  &none  &none  &none  &none  &none
+&quotes 0 0  &parents   &carets   &brackets  &curls    &none          &none  &none  &none  &none  &none  &none
+&none        &dot_net   &dot_com  &dot_org   &dot_gov  &none          &none  &none  &none  &none  &none  &none
+             &none      &none     &none      &none     &none          &none  &none  &none  &none  &none
             >;
         };
 
