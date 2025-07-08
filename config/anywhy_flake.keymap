@@ -9,7 +9,7 @@
     flavor = "tap-preferred";
 };
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 PLUS TILDE>; };
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS N1 N2 N3 N4 N5 N6 N7 N8 N9 N0 PLUS TILDE LEFT RIGHT DOWN UP>; };
 
 &lt { require-prior-idle-ms = <25>; };
 
@@ -67,6 +67,48 @@
             key-positions = <44 45>;
             require-prior-idle-ms = <25>;
             layers = <3>;
+        };
+
+        L_SHFT {
+            bindings = <&sk LSHFT>;
+            key-positions = <15 16>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        R_SHFT {
+            bindings = <&sk LSHFT>;
+            key-positions = <19 20>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        L_CTRL {
+            bindings = <&sk LCTRL>;
+            key-positions = <14 15>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        R_CTRL {
+            bindings = <&sk LCTRL>;
+            key-positions = <20 21>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        L_ALT {
+            bindings = <&sk LALT>;
+            key-positions = <13 14>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
+        };
+
+        R_ALT {
+            bindings = <&sk LALT>;
+            key-positions = <21 22>;
+            layers = <0>;
+            require-prior-idle-ms = <75>;
         };
     };
 
@@ -402,13 +444,6 @@
             label = "VY";
         };
 
-        ye: ye {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Y &kp E>;
-            label = "YE";
-        };
-
         xe: xe {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -487,24 +522,29 @@
         compatible = "zmk,keymap";
 
         base {
+            display-name = "Base";
             bindings = <
-&none       &kp X          &kp W          &kp M        &mt PRINTSCREEN P  &kp Z         &none                  &kp F        &kp U        &kp Y         &kp Q         &none
-&sl 4       &mt LGUI R     &mt LALT S     &mt LCTRL T  &mt LSHFT H        &kp B         &kp J                  &mt RSHFT N  &mt RCTRL A  &mt RALT I    &mt RGUI O    &sl 4
-&kp RETURN  &key_repeat    &kp C          &kp G        &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L        &kp K        &kp V         &key_repeat   &kp RETURN
-            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5        &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E      &sl 5        &kp C_VOL_DN  &kp C_VOL_UP
+
+&none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
+&sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
+&kp RETURN  &key_repeat    &kp C          &kp G  &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K  &kp V         &key_repeat   &kp RETURN
+            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5  &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E  &sl 5  &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
         steno {
+            display-name = "Stno";
             bindings = <
-&trans          &xe      &trans  &trans       &ph           &trans      &trans  &fl           &ua          &ye         &trans      &trans
-&punct_spc 0 0  &re      &sw     &trans       &gh           &ble        &trans  &fe           &au          &vi         &ov         &ou
-&trans          &kp DEL  &cs     &gm          &pd           &kp BSPC    &trans  &lf           &ke          &ve         &eve        &trans
-                &trans   &trans  &kp LC(DEL)  &kp LC(BSPC)  &none       &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
+
+&trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ou         &trans      &trans
+&punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &none
+&sk LSHFT       &none    &cs       &gm          &pd           &trans    &trans  &lf           &ke          &ve         &eve        &sk RSHFT
+                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none     &none   &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
             >;
         };
 
         Navigation {
+            display-name = "Navi";
             bindings = <
 &to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
@@ -514,15 +554,17 @@
         };
 
         num+sym {
+            display-name = "N+S";
             bindings = <
-&to 0      &none        &kp N3  &kp N4   &kp N7    &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
-&kp EQUAL  &key_repeat  &kp N0  &kp N1   &kp N2    &kp N9              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&trans     &none        &kp N5  &kp N6   &kp N8    &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &trans
-           &none        &none   &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none     &none                           &none                               &none                  &none
+&to 0      &none         &kp N3        &kp N4   &kp N7    &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
+&kp EQUAL  &key_repeat   &kp N0        &kp N1   &kp N2    &kp N9              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
+&trans     &none         &kp N5        &kp N6   &kp N8    &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &trans
+           &kp C_BRI_DN  &kp C_BRI_UP  &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none     &none                           &none                               &none                  &none
             >;
         };
 
         quick {
+            display-name = "qwck";
             bindings = <
 &trans  &trans  &trans  &apo_m    &trans           &trans                            &trans             &ef     &trans    &apo_y  &trans  &trans
 &none   &apo_r  &apo_s  &apo_t    &trans           &trans                            &trans             &apo_n  &trans    &ion    &vo     &none
@@ -532,15 +574,17 @@
         };
 
         lazy {
+            display-name = "Lazy";
             bindings = <
-&none        &super_ad  &main_ad  &not_app   &year     &trans    &trans  &trans        &trans        &vy           &trans        &none
-&quotes 0 0  &carets    &parents  &brackets  &curls    &trans    &je     &trans        &trans        &trans        &trans        &none
-&trans       &dot_net   &dot_com  &dot_org   &dot_gov  &trans    &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-             &trans     &trans    &none      &trans    &none     &none   &trans        &none         &trans        &trans
+&none        &super_ad  &main_ad  &not_app   &year     &bootloader    &trans  &trans        &trans        &vy           &trans        &none
+&quotes 0 0  &carets    &parents  &brackets  &curls    &trans         &je     &trans        &trans        &trans        &trans        &none
+&trans       &dot_net   &dot_com  &dot_org   &dot_gov  &trans         &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+             &trans     &trans    &none      &trans    &none          &none   &trans        &none         &trans        &trans
             >;
         };
 
         gaming {
+            display-name = "Game";
             bindings = <
 &to 0   &kp U           &kp Q    &kp W      &kp E      &kp Y           &trans  &trans  &trans  &trans  &trans  &trans
 &kp R   &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
