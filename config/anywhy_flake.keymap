@@ -64,14 +64,14 @@
 
         L_CTRL {
             bindings = <&sk LCTRL>;
-            key-positions = <14 15>;
+            key-positions = <27 28>;
             layers = <0>;
             require-prior-idle-ms = <100>;
         };
 
         R_CTRL {
             bindings = <&sk LCTRL>;
-            key-positions = <20 21>;
+            key-positions = <31 32>;
             layers = <0>;
             require-prior-idle-ms = <100>;
         };
@@ -88,6 +88,20 @@
             key-positions = <21 22>;
             layers = <0>;
             require-prior-idle-ms = <100>;
+        };
+
+        L_CS {
+            bindings = <&sk LC(LSHFT)>;
+            key-positions = <17 16>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
+        };
+
+        R_CS {
+            bindings = <&sk LC(LSHFT)>;
+            key-positions = <18 19>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
         };
     };
 
@@ -535,8 +549,8 @@
             display-name = "Navi";
             bindings = <
 &to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &to 2           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&trans    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none           &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &trans
+&kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &kp LGUI        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&trans    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &trans
           &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
