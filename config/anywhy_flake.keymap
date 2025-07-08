@@ -516,6 +516,17 @@
             require-prior-idle-ms = <25>;
             flavor = "tap-preferred";
         };
+
+        zmk_fx: zmk_fx {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ZMK_FX";
+            bindings = <&bootloader>, <&studio_unlock>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <100>;
+        };
     };
 
     keymap {
@@ -544,10 +555,10 @@
         Navigation {
             display-name = "Navi";
             bindings = <
-&to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &studio_unlock    &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &none             &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&trans    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none             &none           &kp RSHFT       &kp RCTRL       &kp RALT         &none            &trans
-          &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG      &dbl_Lclk       &mkp LCLK       &none           &none            &none
+&to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &none           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&trans    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &none           &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &trans
+          &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
 
@@ -574,9 +585,9 @@
         lazy {
             display-name = "Lazy";
             bindings = <
-&none        &super_ad  &main_ad  &not_app   &year     &bootloader    &none  &none  &none  &none  &none  &none
+&none        &super_ad  &main_ad  &not_app   &year     &none          &none  &none  &none  &none  &none  &none
 &quotes 0 0  &parents   &carets   &brackets  &curls    &none          &none  &none  &none  &none  &none  &none
-&none        &dot_net   &dot_com  &dot_org   &dot_gov  &none          &none  &none  &none  &none  &none  &none
+&none        &dot_net   &dot_com  &dot_org   &dot_gov  &zmk_fx 0 0    &none  &none  &none  &none  &none  &none
              &none      &none     &none      &none     &none          &none  &none  &none  &none  &none
             >;
         };
