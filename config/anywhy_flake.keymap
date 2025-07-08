@@ -548,10 +548,10 @@
         Navigation {
             display-name = "Navi";
             bindings = <
-&to 0     &kp TAB          &mt HOME PG_UP   &kp UP           &mt END PG_DN    &to 2           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&kp LALT  &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT        &kp LGUI        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&trans    &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &mt RC(Y) RC(Z)  &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &trans
-          &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none            &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &none           &none            &none
+&to 0            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &to 2           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&kp LALT         &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT      &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&mt LC(Y) LC(Z)  &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &sk LSHFT      &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &trans
+                 &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none          &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &none           &none            &none
             >;
         };
 
@@ -588,10 +588,10 @@
         gaming {
             display-name = "Game";
             bindings = <
-&to 0   &kp U           &kp Q    &kp W      &kp E      &kp Y           &trans  &trans  &trans  &trans  &trans  &trans
-&kp R   &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp M           &kp Z    &kp C      &kp V      &kp B           &trans  &trans  &trans  &trans  &trans  &trans
-        &kp Y           &kp TAB  &kp LCTRL  &kp SPACE  &kp LEFT_ALT    &trans  &trans  &trans  &trans  &trans
+&to 0   &kp U           &kp Q    &kp W      &kp E      &kp Y           &none  &none  &none  &none  &none  &none
+&kp R   &kp LEFT_SHIFT  &kp A    &kp S      &kp D      &kp F           &none  &none  &none  &none  &none  &none
+&trans  &kp M           &kp Z    &kp C      &kp V      &kp B           &none  &none  &none  &none  &none  &none
+        &kp Y           &kp TAB  &kp LCTRL  &kp SPACE  &kp LEFT_ALT    &none  &none  &none  &none  &none
             >;
         };
     };
