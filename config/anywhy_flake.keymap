@@ -520,6 +520,20 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <100>;
         };
+
+        LYR_1_2: LYR_1_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LYR_1_2";
+            #binding-cells = <0>;
+            bindings = <&sl 1>, <&to 2>;
+        };
+
+        LYR_1_3: LYR_1_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LYR_1_3";
+            #binding-cells = <0>;
+            bindings = <&sl 1>, <&to 3>;
+        };
     };
 
     keymap {
@@ -531,7 +545,7 @@
 &none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
 &sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
 &kp RETURN  &key_repeat    &kp C          &kp G  &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K  &kp V         &key_repeat   &kp RETURN
-            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5  &lt 2 SPACE        &sl 1         &sl 1                  &lt 3 E  &sl 5  &kp C_VOL_DN  &kp C_VOL_UP
+            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5  &lt 2 SPACE        &LYR_1_2      &LYR_1_3               &lt 3 E  &sl 5  &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
@@ -548,7 +562,7 @@
         Navigation {
             display-name = "Navi";
             bindings = <
-&to 0            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &to 2           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&to 0            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &none           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp LALT         &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT      &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
 &mt LC(Y) LC(Z)  &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &sk LSHFT      &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &trans
                  &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none          &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &none           &none            &none
@@ -558,7 +572,7 @@
         num+sym {
             display-name = "N+S";
             bindings = <
-&to 0      &none         &kp N3        &kp N4   &kp N7    &kp PERCENT         &to 3     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
+&to 0      &none         &kp N3        &kp N4   &kp N7    &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &key_repeat   &kp N0        &kp N1   &kp N2    &kp N9              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
 &trans     &none         &kp N5        &kp N6   &kp N8    &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &trans
            &kp C_BRI_DN  &kp C_BRI_UP  &kp DEL  &kp BSPC  &mt COMMA PERIOD    &none     &none                           &none                               &none                  &none
@@ -578,7 +592,7 @@
         lazy {
             display-name = "Lazy";
             bindings = <
-&none        &super_ad  &main_ad  &not_app   &year     &to 6          &none  &none  &none  &none  &none  &none
+&none        &super_ad  &main_ad  &not_app   &year     &none          &none  &none  &none  &none  &none  &none
 &quotes 0 0  &parents   &carets   &brackets  &curls    &none          &none  &none  &none  &none  &none  &none
 &none        &dot_net   &dot_com  &dot_org   &dot_gov  &zmk_fx 0 0    &none  &none  &none  &none  &none  &none
              &none      &none     &none      &none     &none          &none  &none  &none  &none  &none
