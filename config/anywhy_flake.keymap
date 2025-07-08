@@ -524,6 +524,7 @@
         base {
             display-name = "Base";
             bindings = <
+
 &none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
 &sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
 &kp RETURN  &key_repeat    &kp C          &kp G  &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K  &kp V         &key_repeat   &kp RETURN
@@ -534,6 +535,7 @@
         steno {
             display-name = "Stno";
             bindings = <
+
 &trans          &xe      &trans    &trans       &ph           &trans    &trans  &fl           &ua          &ou         &trans      &trans
 &punct_spc 0 0  &re      &sw       &trans       &gh           &ble      &trans  &fe           &au          &vi         &ov         &none
 &sk LSHFT       &none    &cs       &gm          &pd           &trans    &trans  &lf           &ke          &ve         &eve        &sk RSHFT
