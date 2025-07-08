@@ -605,20 +605,20 @@
         quick {
             display-name = "qwck";
             bindings = <
-&none  &none   &none   &apo_m    &none            &none                             &none              &ef     &none     &apo_y  &vy    &none
-&none  &apo_r  &apo_s  &apo_t    &none            &none                             &none              &apo_n  &none     &ion    &vo    &none
-&none  &none   &apo_c  &none     &none            &none                             &none              &apo_L  &ka       &apo_v  &none  &none
-       &none   &none   &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
+&none  &super_ad  &main_ad  &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
+&none  &apo_r     &apo_s    &apo_t    &not_app         &none                             &none              &apo_n  &none     &ion    &vo    &none
+&none  &none      &apo_c    &none     &none            &none                             &none              &apo_L  &ka       &apo_v  &none  &none
+       &none      &none     &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
             >;
         };
 
         lazy {
             display-name = "Lazy";
             bindings = <
-&none  &super_ad    &main_ad  &not_app  &year     &none    &none  &none  &none  &none  &none  &none
-&none  &quotes 0 0  &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
-&none  &dot_net     &dot_com  &dot_org  &dot_gov  &none    &none  &none  &none  &none  &none  &none
-       &none        &none     &none     &none     &none    &none  &none  &none  &none  &none
+&none  &none     &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
+&none  &none     &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
+&none  &dot_net  &dot_com  &dot_org  &dot_gov  &none    &none  &none  &none  &none  &none  &none
+       &none     &none     &none     &none     &none    &none  &none  &none  &none  &none
             >;
         };
 
