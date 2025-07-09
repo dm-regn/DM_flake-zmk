@@ -105,7 +105,7 @@
         };
 
         game {
-            bindings = <&to 6>;
+            bindings = <&to 5>;
             key-positions = <0 12 24>;
             layers = <0>;
         };
@@ -315,13 +315,6 @@
             #binding-cells = <0>;
             bindings = <&kp DOT &kp O &kp R &kp G>;
             label = "DOT_ORG";
-        };
-
-        dot_gov: dot_gov {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp G &kp O &kp V>;
-            label = "DOT_GOV";
         };
 
         pd: pd {
@@ -565,10 +558,10 @@
         base {
             display-name = "Base";
             bindings = <
-&none       &kp X          &kp W          &kp M  &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U  &kp Y         &kp Q         &none
-&sl 4       &mt LGUI R     &kp S          &kp T  &kp H              &kp B         &kp J                  &kp N    &kp A  &kp I         &mt RGUI O    &sl 4
-&kp RETURN  &key_repeat    &kp C          &kp G  &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K  &kp V         &key_repeat   &kp RETURN
-            &kp RC(MINUS)  &kp LC(EQUAL)  &sl 5  &lt 2 SPACE        &LYR_1_2      &LYR_1_3               &lt 3 E  &sl 5  &kp C_VOL_DN  &kp C_VOL_UP
+&none  &kp X          &kp W          &kp M       &mt PRINTSCREEN P  &kp Z         &none                  &kp F    &kp U       &kp Y         &kp Q         &none
+&sl 4  &mt LGUI R     &kp S          &kp T       &kp H              &kp B         &kp J                  &kp N    &kp A       &kp I         &mt RGUI O    &sl 4
+&none  &key_repeat    &kp C          &kp G       &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K       &kp V         &key_repeat   &none
+       &kp RC(MINUS)  &kp LC(EQUAL)  &kp RETURN  &lt 2 SPACE        &LYR_1_2      &LYR_1_3               &lt 3 E  &kp RETURN  &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
@@ -607,18 +600,8 @@
             bindings = <
 &none  &super_ad  &main_ad  &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
 &none  &apo_r     &apo_s    &apo_t    &not_app         &none                             &none              &apo_n  &none     &ion    &vo    &none
-&none  &none      &apo_c    &none     &none            &none                             &none              &apo_L  &ka       &apo_v  &none  &none
+&none  &none      &apo_c    &dot_com  &dot_net         &none                             &none              &apo_L  &ka       &apo_v  &none  &none
        &none      &none     &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
-            >;
-        };
-
-        lazy {
-            display-name = "Lazy";
-            bindings = <
-&none  &none     &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
-&none  &none     &none     &none     &none     &none    &none  &none  &none  &none  &none  &none
-&none  &dot_net  &dot_com  &dot_org  &dot_gov  &none    &none  &none  &none  &none  &none  &none
-       &none     &none     &none     &none     &none    &none  &none  &none  &none  &none
             >;
         };
 
