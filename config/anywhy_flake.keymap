@@ -127,7 +127,7 @@
         base {
             bindings = <&to 0>;
             key-positions = <0 12 24>;
-            layers = <5>;
+            layers = <5 2 3>;
         };
     };
 
