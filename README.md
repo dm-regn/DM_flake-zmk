@@ -1,6 +1,6 @@
 # Anywhy Flake Based
 
-starting off with Flake-M as offered.
+starting off with Flake-M from [anywhy-io](https://github.com/anywhy-io/flake-zmk-module).
 
 successfully added a n!n_v2 with 1.3" oled display as central dongle with the flake-m now acting as peripherals. 
 using [englmaxi](https://github.com/englmaxi/zmk-dongle-display) for dongle stuff. 
