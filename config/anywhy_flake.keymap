@@ -15,7 +15,7 @@
 
 &mmv { acceleration-exponent = <2>; };
 
-&msc { acceleration-exponent = <1>; };
+&msc { acceleration-exponent = <4>; };
 
 / {
     combos {
