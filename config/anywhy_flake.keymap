@@ -504,7 +504,7 @@
         ion: ion {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp I &kp O &kp N &kp SPACE>;
+            bindings = <&kp I &kp O &kp N>;
             label = "ION";
         };
     };
@@ -590,7 +590,7 @@
 &none            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &none           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp LALT         &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT      &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
 &mt LC(Y) LC(Z)  &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &sk LSHFT      &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &none
-                 &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none          &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &none           &none            &none
+                 &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none          &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &trans          &none            &none
             >;
         };
 
