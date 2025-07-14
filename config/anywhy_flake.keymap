@@ -54,14 +54,14 @@
         L_SHFT {
             bindings = <&sk LSHFT>;
             key-positions = <15 16>;
-            layers = <0>;
+            layers = <0 1 4>;
             require-prior-idle-ms = <100>;
         };
 
         R_SHFT {
             bindings = <&sk LSHFT>;
             key-positions = <19 20>;
-            layers = <0>;
+            layers = <0 1 4>;
             require-prior-idle-ms = <100>;
         };
 
@@ -579,7 +579,7 @@
             bindings = <
 &none           &xe      &none     &none        &ph           &none    &pd    &fl           &ua          &ou              &none            &none
 &punct_spc 0 0  &re      &sw       &none        &gh           &ble     &je    &fe           &au          &vi              &ov              &none
-&sk LSHFT       &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &sk RSHFT
+&none           &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &none
                 &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &mt C_RW C_PREV  &mt C_FF C_NEXT
             >;
         };
