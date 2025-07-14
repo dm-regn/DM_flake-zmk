@@ -577,10 +577,10 @@
         steno {
             display-name = "Stno";
             bindings = <
-&none           &xe      &none     &none        &ph           &none    &pd    &fl           &ua          &ou         &none       &none
-&punct_spc 0 0  &re      &sw       &none        &gh           &ble     &je    &fe           &au          &vi         &ov         &none
-&sk LSHFT       &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve         &eve        &sk RSHFT
-                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &kp C_PREV  &kp C_NEXT
+&none           &xe      &none     &none        &ph           &none    &pd    &fl           &ua          &ou              &none            &none
+&punct_spc 0 0  &re      &sw       &none        &gh           &ble     &je    &fe           &au          &vi              &ov              &none
+&sk LSHFT       &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &sk RSHFT
+                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &mt C_RW C_PREV  &mt C_FF C_NEXT
             >;
         };
 
