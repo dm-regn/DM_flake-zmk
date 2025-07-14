@@ -597,9 +597,9 @@
         num+sym {
             display-name = "N+S";
             bindings = <
-&none      &none         &kp N3        &kp N4  &kp N7  &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
-&kp EQUAL  &key_repeat   &kp N0        &kp N1  &kp N2  &kp N9              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
-&kp DEL    &kp BSPC      &kp N5        &kp N6  &kp N8  &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &none
+&none      &none         &kp N5        &kp N3  &kp N4  &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
+&kp EQUAL  &key_repeat   &kp N0        &kp N1  &kp N2  &kp N7              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
+&kp DEL    &kp BSPC      &kp N9        &kp N8  &kp N6  &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &none
            &kp C_BRI_DN  &kp C_BRI_UP  &trans  &none   &mt COMMA PERIOD    &none     &none                           &none                               &none                  &none
             >;
         };
