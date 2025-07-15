@@ -561,7 +561,7 @@
             display-name = "Base";
             bindings = <
 &none  &kp X          &kp W          &kp M       &mt PRINTSCREEN P  &kp Z         &sl 3                  &kp F    &kp U       &kp Y         &kp Q         &none
-&sl 4  &mt LGUI R     &kp S          &kp T       &kp H              &kp B         &kp J                  &kp N    &kp A       &kp I         &mt RGUI O    &sl 4
+&sl 4  &mt LGUI R     &kp S          &kp T       &kp H              &kp B         &kp J                  &kp N    &kp A       &kp I         &mt LGUI O    &sl 4
 &none  &key_repeat    &kp C          &kp G       &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K       &kp V         &key_repeat   &none
        &kp RC(MINUS)  &kp LC(EQUAL)  &kp RETURN  &lt 2 SPACE        &LYR_1_2      &LYR_1_3               &lt 3 E  &kp RETURN  &kp C_VOL_DN  &kp C_VOL_UP
             >;
