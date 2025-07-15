@@ -410,13 +410,6 @@
             label = "JE";
         };
 
-        ph: ph {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp P &kp H>;
-            label = "PH";
-        };
-
         ka: ka {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -577,8 +570,8 @@
         steno {
             display-name = "Stno";
             bindings = <
-&none           &xe      &none     &none        &ph           &none    &pd    &fl           &ua          &ou              &none            &none
-&punct_spc 0 0  &re      &sw       &none        &gh           &ble     &je    &fe           &au          &vi              &ov              &none
+&none           &xe      &none     &none        &none         &none    &pd    &fl           &ua          &ou              &none            &none
+&punct_spc 0 0  &re      &sw       &none        &gh           &none    &je    &fe           &au          &vi              &ov              &none
 &none           &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &none
                 &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &mt C_RW C_PREV  &mt C_FF C_NEXT
             >;
@@ -608,7 +601,7 @@
             display-name = "qwck";
             bindings = <
 &none  &super_ad  &main_ad  &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
-&none  &apo_r     &apo_s    &apo_t    &not_app         &none                             &none              &apo_n  &none     &ion    &vo    &none
+&none  &apo_r     &apo_s    &apo_t    &not_app         &ble                              &Le                &apo_n  &none     &ion    &vo    &none
 &none  &none      &apo_c    &dot_com  &dot_net         &none                             &none              &apo_L  &ka       &apo_v  &none  &none
        &none      &none     &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
             >;
