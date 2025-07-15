@@ -12,6 +12,11 @@ seems stable, it's been up and running without issues.
 - Durock ice king linear switches (stock)
 - PLA case (no plate, bare PCB)
 
+layout notes:
+- running a modified version of aptmak
+- layers: alpha, steno, navigation, number+symbols, quick, gaming
+- looking into implement more combos using [ARTSEY](https://keymapdb.com/keymaps/ARTSEY/) as an example
+
 next steps:
 - wire in battery with rocker switch
 - wire in bootloader / reset momentary switch
