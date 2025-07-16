@@ -132,6 +132,13 @@
             key-positions = <0 12 24>;
             layers = <5 2 3>;
         };
+
+        cmbo_f {
+            bindings = <&kp F>;
+            key-positions = <3 4>;
+            require-prior-idle-ms = <100>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -560,10 +567,10 @@
         base {
             display-name = "Base";
             bindings = <
-&none  &kp X          &kp W          &kp M       &mt PRINTSCREEN P  &kp Z         &sl 3                  &kp F    &kp U       &kp Y         &kp Q         &none
-&sl 4  &mt LGUI R     &kp S          &kp T       &kp H              &kp B         &kp J                  &kp N    &kp A       &kp I         &mt LGUI O    &sl 4
-&none  &key_repeat    &kp C          &kp G       &kp D              &mt F4 ESC    &mt LG(L) LA(LC(DEL))  &kp L    &kp K       &kp V         &key_repeat   &none
-       &kp RC(MINUS)  &kp LC(EQUAL)  &kp RETURN  &lt 2 SPACE        &LYR_1_2      &LYR_1_3               &lt 3 E  &kp RETURN  &kp C_VOL_DN  &kp C_VOL_UP
+&none  &kp X          &kp W          &kp M       &mt PRINTSCREEN P  &kp Z       &none     &kp F    &kp U       &kp Y         &kp Q         &none
+&sl 4  &mt LGUI R     &kp S          &kp T       &kp H              &kp B       &kp J     &kp N    &kp A       &kp I         &mt LGUI O    &sl 4
+&none  &key_repeat    &kp C          &kp G       &kp D              &none       &none     &kp L    &kp K       &kp V         &key_repeat   &none
+       &kp RC(MINUS)  &kp LC(EQUAL)  &kp RETURN  &lt 2 SPACE        &LYR_1_2    &LYR_1_3  &lt 3 E  &kp RETURN  &kp C_VOL_DN  &kp C_VOL_UP
             >;
         };
 
@@ -582,7 +589,7 @@
             bindings = <
 &none            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &none           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
 &kp LALT         &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT      &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
-&mt LC(Y) LC(Z)  &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &sk LSHFT      &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &none            &none
+&mt LC(Y) LC(Z)  &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &sk LSHFT      &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &mt F4 ESC       &none
                  &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none          &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &trans          &none            &none
             >;
         };
@@ -593,7 +600,7 @@
 &none      &none         &kp N5        &kp N3  &kp N4  &kp PERCENT         &none     &kp BACKSLASH                   &kp POUND                           &kp CARET              &kp GRAVE                      &none
 &kp EQUAL  &key_repeat   &kp N0        &kp N1  &kp N2  &kp N7              &kp LGUI  &kp ASTRK                       &kp SLASH                           &kp PLUS               &kp MINUS                      &mt COLON SEMI
 &kp DEL    &kp BSPC      &kp N9        &kp N8  &kp N6  &kp DOLLAR          &none     &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LBRC LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET  &none
-           &kp C_BRI_DN  &kp C_BRI_UP  &trans  &none   &mt COMMA PERIOD    &none     &none                           &none                               &none                  &none
+           &kp C_BRI_DN  &kp C_BRI_UP  &trans  &none   &mt COMMA PERIOD    &none     &none                           &kp LA(LC(DEL))                     &none                  &none
             >;
         };
 
