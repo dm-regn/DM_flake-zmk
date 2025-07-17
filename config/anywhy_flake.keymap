@@ -577,18 +577,18 @@
         steno {
             display-name = "Stno";
             bindings = <
-&none           &xe      &none     &none        &none         &none    &pd    &fl           &ua          &ou              &none            &none
-&punct_spc 0 0  &re      &sw       &none        &gh           &none    &je    &fe           &au          &vi              &ov              &none
-&none           &none    &cs       &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &none
-                &kp DEL  &kp BSPC  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &mt C_RW C_PREV  &mt C_FF C_NEXT
+&none           &xe    &none  &none        &none         &none    &pd    &fl           &ua          &ou              &none            &none
+&punct_spc 0 0  &re    &sw    &none        &gh           &none    &je    &fe           &au          &vi              &ov              &none
+&none           &none  &cs    &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &none
+                &none  &none  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &mt C_RW C_PREV  &mt C_FF C_NEXT
             >;
         };
 
         Navigation {
             display-name = "Navi";
             bindings = <
-&none            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &none           &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
-&kp LALT         &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT      &none           &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
+&none            &mt LG(TAB) TAB  &mt HOME PG_UP   &kp UP           &mt END PG_DN  &kp DEL         &msc SCRL_LEFT  &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &msc SCRL_RIGHT  &none
+&kp LALT         &kp LGUI         &kp LEFT         &kp DOWN         &kp RIGHT      &kp BSPC        &none           &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp LG(RS(D))
 &mt LC(Y) LC(Z)  &mt RC(F) RC(A)  &mt LG(V) RC(V)  &mt RC(X) RC(C)  &sk LSHFT      &kp F2          &none           &sk RSHFT       &sk RCTRL       &sk RALT         &mt F4 ESC       &none
                  &bt BT_PRV       &bt BT_NXT       &bt BT_CLR       &none          &out OUT_TOG    &dbl_Lclk       &mkp LCLK       &trans          &none            &none
             >;
@@ -609,7 +609,7 @@
             bindings = <
 &none  &super_ad  &main_ad  &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
 &none  &apo_r     &apo_s    &apo_t    &not_app         &ble                              &Le                &apo_n  &none     &ion    &vo    &none
-&none  &none      &apo_c    &dot_com  &dot_net         &none                             &none              &apo_L  &ka       &apo_v  &none  &none
+&none  &none      &apo_c    &dot_com  &apo_d           &dot_net                          &none              &apo_L  &ka       &apo_v  &none  &none
        &none      &none     &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
             >;
         };
