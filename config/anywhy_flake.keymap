@@ -145,6 +145,12 @@
             key-positions = <16 17>;
             layers = <1>;
         };
+
+        ion {
+            bindings = <&ion>;
+            key-positions = <18 19>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -621,7 +627,7 @@
             display-name = "qwck";
             bindings = <
 &none  &super_ad  &main_ad  &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
-&none  &apo_r     &apo_s    &apo_t    &not_app         &ble                              &Le                &apo_n  &none     &ion    &vo    &none
+&none  &apo_r     &apo_s    &apo_t    &not_app         &ble                              &Le                &apo_n  &none     &none   &vo    &none
 &none  &none      &apo_c    &dot_com  &apo_d           &dot_net                          &none              &apo_L  &ka       &apo_v  &none  &none
        &none      &none     &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
             >;
