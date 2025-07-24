@@ -139,6 +139,12 @@
             require-prior-idle-ms = <100>;
             layers = <0>;
         };
+
+        ght {
+            bindings = <&ght>;
+            key-positions = <16 17>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -506,6 +512,13 @@
             #binding-cells = <0>;
             bindings = <&kp I &kp O &kp N>;
             label = "ION";
+        };
+
+        ght: ght {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp G &kp H &kp T>;
+            label = "GHT";
         };
     };
 
