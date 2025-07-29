@@ -114,14 +114,14 @@
         };
 
         c_pars {
-            bindings = <&PARS>;
+            bindings = <&PARS 0 0>;
             key-positions = <31 32>;
             layers = <3>;
             require-prior-idle-ms = <100>;
         };
 
         c_bars {
-            bindings = <&BARS>;
+            bindings = <&BARS 0 0>;
             key-positions = <33 34>;
             layers = <3>;
             require-prior-idle-ms = <100>;
@@ -150,6 +150,13 @@
             bindings = <&ion>;
             key-positions = <18 19>;
             layers = <1>;
+        };
+
+        cbo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <0 1>;
+            layers = <0>;
+            require-prior-idle-ms = <100>;
         };
     };
 
@@ -566,17 +573,23 @@
         };
 
         PARS: PARS {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "PARS";
-            #binding-cells = <0>;
-            bindings = <&parents>, <&carets>;
+            bindings = <&carets>, <&parents>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
         };
 
         BARS: BARS {
-            compatible = "zmk,behavior-tap-dance";
+            compatible = "zmk,behavior-hold-tap";
             label = "BARS";
-            #binding-cells = <0>;
-            bindings = <&brackets>, <&curls>;
+            bindings = <&curls>, <&brackets>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 
