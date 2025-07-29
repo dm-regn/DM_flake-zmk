@@ -147,7 +147,7 @@
         };
 
         ion {
-            bindings = <&ion>;
+            bindings = <&ing>;
             key-positions = <18 19>;
             layers = <1>;
         };
@@ -520,10 +520,10 @@
             label = "APO_D";
         };
 
-        ion: ion {
+        ing: ion {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp I &kp O &kp N>;
+            bindings = <&kp I &kp N &kp G>;
             label = "ION";
         };
 
@@ -591,6 +591,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        ADIR: ADIR {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ADIR";
+            bindings = <&super_ad>, <&main_ad>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -639,10 +649,10 @@
         quick {
             display-name = "qwck";
             bindings = <
-&none  &super_ad  &main_ad  &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
-&none  &apo_r     &apo_s    &apo_t    &not_app         &ble                              &Le                &apo_n  &none     &none   &vo    &none
-&none  &none      &apo_c    &dot_com  &apo_d           &dot_net                          &none              &apo_L  &ka       &apo_v  &none  &none
-       &none      &none     &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
+&none  &ADIR 0 0  &none   &apo_m    &year            &quotes 0 0                       &none              &ef     &none     &apo_y  &vy    &none
+&none  &apo_r     &apo_s  &apo_t    &not_app         &ble                              &Le                &apo_n  &none     &none   &vo    &none
+&none  &none      &apo_c  &ing      &apo_d           &none                             &none              &apo_L  &ka       &apo_v  &none  &none
+       &none      &none   &kp PIPE  &mt TILDE UNDER  &mt DOUBLE_QUOTES SINGLE_QUOTE    &mt QUESTION EXCL  &kp AT  &kp AMPS  &none   &none
             >;
         };
 
