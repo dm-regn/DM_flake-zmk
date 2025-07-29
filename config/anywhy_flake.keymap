@@ -133,27 +133,8 @@
             layers = <5 2 3>;
         };
 
-        cmbo_f {
-            bindings = <&kp F>;
-            key-positions = <3 4>;
-            require-prior-idle-ms = <100>;
-            layers = <0>;
-        };
-
-        ght {
-            bindings = <&ght>;
-            key-positions = <16 17>;
-            layers = <1>;
-        };
-
-        ion {
-            bindings = <&ing>;
-            key-positions = <18 19>;
-            layers = <1>;
-        };
-
         cbo_tab {
-            bindings = <&kp TAB>;
+            bindings = <&mt LG(TAB) TAB>;
             key-positions = <0 1>;
             layers = <0>;
             require-prior-idle-ms = <100>;
@@ -620,7 +601,7 @@
             display-name = "Stno";
             bindings = <
 &none           &xe    &none  &none        &none         &none    &pd    &fl           &ua          &ou              &none            &none
-&punct_spc 0 0  &re    &sw    &none        &gh           &none    &je    &fe           &au          &vi              &ov              &none
+&punct_spc 0 0  &re    &sw    &none        &gh           &ght     &je    &fe           &au          &vi              &ov              &none
 &none           &none  &cs    &gm          &none         &none    &none  &lf           &ke          &ve              &eve             &none
                 &none  &none  &kp LC(DEL)  &kp LC(BSPC)  &none    &none  &kp LC(BSPC)  &kp LC(DEL)  &mt C_RW C_PREV  &mt C_FF C_NEXT
             >;
