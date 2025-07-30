@@ -17,6 +17,8 @@ layout notes:
 - layers: alpha, steno, navigation, number+symbols, quick, gaming
 - looking into implement more combos using [ARTSEY](https://keymapdb.com/keymaps/ARTSEY/) as an example
 
+![keymap](/my_keymap.png)
+
 next steps:
 - wire in battery with rocker switch
 - wire in bootloader / reset momentary switch
