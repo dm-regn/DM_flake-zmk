@@ -135,7 +135,7 @@
 
         cbo_tab {
             bindings = <&mt LG(TAB) TAB>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             layers = <0>;
             require-prior-idle-ms = <100>;
         };
